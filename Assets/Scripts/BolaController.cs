@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BolaController : MonoBehaviour
 {
-    // Criando a variável para o rigidbody
+    // Criando a variï¿½vel para o rigidbody
     public Rigidbody2D meuRB;
     private Vector2 minhaVelocidade;
 
@@ -39,7 +39,7 @@ public class BolaController : MonoBehaviour
 
             // Passando a velocidade para a minha velocidade
 
-            // Tentando gerar um valor aleatório
+            // Tentando gerar um valor aleatï¿½rio
             int direcao = Random.Range(0, 4);
 
             switch (direcao)
@@ -74,7 +74,7 @@ public class BolaController : MonoBehaviour
         }
     }
 
-    // Criando o meu evento de colisão
+    // Criando o meu evento de colisï¿½o
     private void OnCollisionEnter2D(Collision2D collision)
     {
         AudioSource.PlayClipAtPoint(sound, transformCam.position);

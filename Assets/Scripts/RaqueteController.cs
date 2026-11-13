@@ -13,16 +13,16 @@ public class RaqueteController : MonoBehaviour
     private float limite = 3.4f;
     public bool player2;
 
-    // Variável para chegar se ele deve ser controlado pela inteligência artificial
+    // Variï¿½vel para chegar se ele deve ser controlado pela inteligï¿½ncia artificial
     public bool automatico = false;
 
-    // Pegando a posição da bola
+    // Pegando a posiï¿½ï¿½o da bola
     public Transform transformBola;
 
     // Start is called before the first frame update.
     void Start()
     {
-        // Pegando a posição inicial da raquete e aplicando à minha posição.
+        // Pegando a posiï¿½ï¿½o inicial da raquete e aplicando ï¿½ minha posiï¿½ï¿½o.
         minhaPosicao = transform.position;
     }
 
@@ -34,9 +34,9 @@ public class RaqueteController : MonoBehaviour
         minhaPosicao.y = meuY;
 
         // Pegando a setinha para cima.
-        // Se eu apertar a setinha para cima, ele subirá a raquete.
+        // Se eu apertar a setinha para cima, ele subirï¿½ a raquete.
 
-        // Modificar a posição da minha raquete.
+        // Modificar a posiï¿½ï¿½o da minha raquete.
         transform.position = minhaPosicao;
 
         if (!automatico)
@@ -73,16 +73,16 @@ public class RaqueteController : MonoBehaviour
         }
         else
         {
-            // tirando ele do automático
+            // tirando ele do automï¿½tico
             // chegcando se as setinhas foram pressionados
             if (Input.GetKey(KeyCode.UpArrow))
             {
                 automatico = false;
             }
 
-            // Para acessar funções matemáticas, nós usamos a classe Mathf
+            // Para acessar funï¿½ï¿½es matemï¿½ticas, nï¿½s usamos a classe Mathf
             meuY = Mathf.Lerp(meuY, transformBola.position.y, 0.02f);
-            // se meu valor é 0 e o da bola é 10 a diferença entre eles é 10, 10% de 10 é 1
+            // se meu valor ï¿½ 0 e o da bola ï¿½ 10 a diferenï¿½a entre eles ï¿½ 10, 10% de 10 ï¿½ 1
         }
 
 
